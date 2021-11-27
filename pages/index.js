@@ -63,15 +63,15 @@ function App() {
           >
             <LinkButton
               href="https://github.com/itta611"
-              leftIcon={<FaTwitter />}
-            >
-              @ittaFunahashi
-            </LinkButton>
-            <LinkButton
-              href="https://twitter.com/ittaFunahashi"
               leftIcon={<FaGithub />}
             >
               @itta611
+            </LinkButton>
+            <LinkButton
+              href="https://twitter.com/ittaFunahashi"
+              leftIcon={<FaTwitter />}
+            >
+              @ittaFunahashi
             </LinkButton>
           </ButtonGroup>
         </Box>
