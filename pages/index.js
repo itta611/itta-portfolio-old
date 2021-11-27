@@ -10,10 +10,11 @@ import {
   theme,
   Container,
   Flex,
-  HStack,
+  ButtonGroup,
   Button,
 } from '@chakra-ui/react';
 import GridItem from '../components/gridItem';
+import LinkButton from '../components/linkButton';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import chokokucadThumb from '../public/chokokucadThumb.png';
 import { FaTwitter, FaGithub } from "react-icons/fa";
@@ -55,36 +56,24 @@ function App() {
           </Flex>
         </Box>
         <Box align="center" p="2">
-          <HStack spacing="10px" justify="center">
-            <Box align="center" fontSize="sm">
-              <Link
-                href="https://github.com/itta611"
-                target="_blank"
-                referrerPolicy="no-referrer"
-              >
-                <Button
-                  leftIcon={<FaGithub />}
-                  variant="outline"
-                >
-                  @itta611
-                </Button>
-              </Link>
-            </Box>
-            <Box align="center" fontSize="sm">
-              <Link
-                href="https://twitter.com/ittaFunahashi"
-                target="_blank"
-                referrerPolicy="no-referrer"
-              >
-                <Button
-                  variant="outline"
-                  leftIcon={<FaTwitter />}
-                >
-                  @ittaFunahashi
-                </Button>
-              </Link>
-            </Box>
-          </HStack>
+          <ButtonGroup
+            spacing="10px"
+            justify="center" 
+            variant="outline"
+          >
+            <LinkButton
+              href="https://github.com/itta611"
+              leftIcon={<FaTwitter />}
+            >
+              @ittaFunahashi
+            </LinkButton>
+            <LinkButton
+              href="https://twitter.com/ittaFunahashi"
+              leftIcon={<FaGithub />}
+            >
+              @itta611
+            </LinkButton>
+          </ButtonGroup>
         </Box>
       </Container>
     </ChakraProvider>

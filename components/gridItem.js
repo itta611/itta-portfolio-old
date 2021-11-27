@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import { LinkBox } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 
 const GridItem = (props) => (
-  <LinkBox
+  <Box
   borderRadius="md"
   >
     <Image
@@ -12,9 +12,12 @@ const GridItem = (props) => (
       layout="fixed"
       objectFit="cover"
       objectPosition="50% 50%;"
+      wordBreak="break-all"
     />
-    testtesttesttesttesttesttesttesttesttesttesttesttesttest
-  </LinkBox>
+    <Text>
+      testtesttesttesttesttesttesttesttesttesttesttesttesttest
+    </Text>
+  </Box>
 )
 
 export default GridItem;
