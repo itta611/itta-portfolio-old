@@ -2,7 +2,7 @@ import {
   Container,
   Box
 } from '@chakra-ui/react';
-// import { GridItemStyle } from '../gridItem';
+import Header from '../header';
 import Footer from '../footer';
 
 const Layout = ({children}) => (
@@ -12,6 +12,7 @@ const Layout = ({children}) => (
       {/* <GridItemStyle /> */}
     </head>
     <Container fontSize="xl" maxW="container.md">
+      <Header />
       {children}
       <Footer />
     </Container>

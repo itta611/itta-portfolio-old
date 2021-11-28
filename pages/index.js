@@ -5,9 +5,12 @@ import {
   VStack,
   Grid,
   Flex,
+  Button,
+  Link,
 } from '@chakra-ui/react';
 import { GridItem } from '../components/gridItem';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
+import { FaArrowRight } from 'react-icons/fa';
+import Caption from '../components/caption';
 import chokokucadThumb from '../public/chokokucadThumb.png';
 import droneflightThumb from '../public/droneflightThumb.png';
 
@@ -15,47 +18,29 @@ function App() {
   console.log(chokokucadThumb)
   return (
     <Box>
-      <Grid minH="30vh" p={3}>
-        <ColorModeSwitcher justifySelf="flex-end" />
-        <VStack spacing={8}>
-          <Text
-            fontSize="6xl"
-            fontWeight="extrabold"
-            fontFamily="Futura"
-          >
-            Itta's Portfolio
-          </Text>
-        </VStack>
-      </Grid>
-      {/* <Box p="10">
+      <Box p="10">
+        <Caption>
+          About
+        </Caption>
         <Text
-          fontSize="2xl"
-          fontWeight="extrabold"
-          fontFamily="Futura"
-        >
-          Itta Funahashi
-        </Text>
+          fontWeight="bold"
+          mb="3"
+        >船橋一汰 Itta Funahashi</Text>
         <Text>
-          Rolem Ipsum is simply dummy text of the printing and typesetting
+          愛知県一宮市に住んでいます。<br />
+          Web系をよくやっていて、サイバーセキュリティとデザインに興味があります。
         </Text>
-      </Box> */}
+      </Box>
       <Box
         p="10"
       >
-        <Text
-          fontSize="2xl"
-          fontWeight="extrabold"
-          fontFamily="Futura"
-        >
+        <Caption>
           Works
-        </Text>
+        </Caption>
         <Flex
-          justify="space-around"
+          justify="space-between"
           align="center"
           alignItems="normal"
-          space="2"
-          p="3"
-          mt="5"
         >
           <GridItem 
             thumbnail={chokokucadThumb}
@@ -71,6 +56,23 @@ function App() {
           >
             Learning Programming with Drone
           </GridItem>
+        </Flex>
+        <Flex
+          justify="flex-end"
+          mt="3"
+        >
+          <Button
+            target="_blank"
+            rightIcon={<FaArrowRight />}
+            isExternal
+            textDecoration="none!important"
+            href="./old"
+            colorScheme="teal"
+            mt="3"
+            as={Link}
+          >
+            My old works
+          </Button>
         </Flex>
       </Box>
     </Box>
