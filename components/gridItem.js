@@ -32,7 +32,8 @@ export const GridItem = ({thumbnail, href, text, children}) => (
           </Text>
           <Text
             textDecoration="none!important"
-            p="5"
+            p="2"
+            pb="5"
             fontSize="sm"
           >
             {children}
