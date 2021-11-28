@@ -24,14 +24,10 @@ export const GridItem = ({thumbnail, href, text, children}) => (
         display="block"
       />
         <LinkOverlay href={href} target="_blank">
-          <Text
-            textDecoration="none!important"
-            p="3"
-          >
+          <Text p="3">
             {text}
           </Text>
           <Text
-            textDecoration="none!important"
             p="2"
             pb="5"
             fontSize="sm"
