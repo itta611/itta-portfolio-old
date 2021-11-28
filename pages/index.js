@@ -2,12 +2,11 @@ import React from 'react';
 import {
   Box,
   Text,
-  VStack,
-  Grid,
   Flex,
   Button,
   Link,
 } from '@chakra-ui/react';
+import { BioSection, BioYear } from '../components/bio.js';
 import { GridItem } from '../components/gridItem';
 import { FaArrowRight } from 'react-icons/fa';
 import Caption from '../components/caption';
@@ -30,6 +29,16 @@ function App() {
           愛知県一宮市に住んでいます。<br />
           Web系をよくやっていて、サイバーセキュリティとデザインに興味があります。
         </Text>
+      </Box>
+      <Box p="10">
+        <Caption>
+          Bio
+        </Caption>
+        <ul>
+          <BioSection><BioYear>2008</BioYear>Born in Aichi, Japan</BioSection>
+          <BioSection><BioYear>2020</BioYear>U-22 プログラミング・コンテスト 2020 経済産業省商務政策局長賞 受賞</BioSection>
+          <BioSection><BioYear>2021</BioYear>U-22 プログラミング・コンテスト 2021 経済産業大臣賞 受賞</BioSection>
+        </ul>
       </Box>
       <Box
         p="10"
