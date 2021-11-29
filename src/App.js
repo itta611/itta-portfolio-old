@@ -3,38 +3,93 @@ import {
   ChakraProvider,
   Box,
   Text,
-  Link,
-  VStack,
-  Code,
-  Grid,
+  Flex,
   theme,
+  Button,
+  Link,
+  Container,
 } from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
+import Header from './components/header';
+import Footer from './components/footer';
+import { BioSection, BioYear } from './components/bio.js';
+import { GridItem } from './components/gridItem';
+import { FaArrowRight } from 'react-icons/fa';
+import Caption from './components/caption';
+import chokokucadThumb from './chokokucadThumb.png';
+import droneflightThumb from './droneflightThumb.png';
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
-          <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
+      <Container fontSize="xl" maxW="container.md" pb="8">
+        <Header />
+        <Box p="10">
+          <Caption>
+            About
+          </Caption>
+          <Text
+            fontWeight="bold"
+            mb="3"
+          >船橋一汰 Itta Funahashi</Text>
+          <Text>
+            愛知県一宮市に住んでいます。<br />
+            Web系をよくやっていて、サイバーセキュリティとデザインに興味があります。
+          </Text>
+        </Box>
+        <Box p="10">
+          <Caption>
+            Bio
+          </Caption>
+          <ul>
+            <BioSection><BioYear>2008</BioYear>Born in　Aichi, Japan</BioSection>
+            <BioSection><BioYear>2020</BioYear>U-22 プログラミング・コンテスト 2020 経済産業省商務政策局長賞 受賞</BioSection>
+            <BioSection><BioYear>2021</BioYear>U-22 プログラミング・コンテスト 2021 経済産業大臣賞 受賞</BioSection>
+          </ul>
+        </Box>
+        <Box p="10">
+          <Caption>
+            Works
+          </Caption>
+          <Flex
+            justify="space-between"
+            align="center"
+            alignItems="normal"
+          >
+            <GridItem 
+              thumbnail={chokokucadThumb}
+              href="https://chokokucad.itta.dev"
+              text="Chokoku CAD"
             >
-              Learn Chakra
-            </Link>
-          </VStack>
-        </Grid>
-      </Box>
+              A breakthrough CAD application on your browser
+            </GridItem>
+            <GridItem 
+              thumbnail={droneflightThumb}
+              href="./drone/"
+              text="Drone Flight"
+            >
+              Learning Programming with Drone
+            </GridItem>
+          </Flex>
+          <Flex
+            justify="flex-end"
+            mt="3"
+          >
+            <Button
+              target="_blank"
+              rightIcon={<FaArrowRight />}
+              isExternal
+              textDecoration="none!important"
+              href="./old"
+              colorScheme="teal"
+              mt="3"
+              as={Link}
+            >
+              My old works
+            </Button>
+          </Flex>
+        </Box>
+        <Footer />
+      </Container>
     </ChakraProvider>
   );
 }
