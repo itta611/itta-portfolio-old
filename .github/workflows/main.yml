@@ -31,7 +31,3 @@ jobs:
         LOCAL_DIR: build
         REMOTE_DIR: /home/ittakun/www/
         ARGS: --delete
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
