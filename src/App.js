@@ -30,7 +30,9 @@ function App() {
           <Text
             fontWeight="bold"
             mb="3"
-          >船橋一汰 Itta Funahashi</Text>
+          >
+            船橋一汰 Itta Funahashi
+          </Text>
           <Text>
             愛知県一宮市に住んでいます。<br />
             Web系をよくやっていて、サイバーセキュリティとデザインに興味があります。
