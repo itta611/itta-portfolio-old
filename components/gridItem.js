@@ -6,7 +6,6 @@ export const GridItem = ({thumbnail, href, text, children}) => (
     borderRadius="md"
     overflow="hidden"
     shadow="md"
-    borderRadius="md"
     textAlign="center"
     w="300px"
     as={Link}

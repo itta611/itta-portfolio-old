@@ -8,12 +8,11 @@ import Footer from '../footer';
 const Layout = ({children}) => (
   <Box as="main" pb={8}>
     <head>
-      <title>Itta's Portfolio</title>
-      {/* <GridItemStyle /> */}
+      <title>Itta&apos;s Portfolio</title>
     </head>
     <Container fontSize="xl" maxW="container.md">
       <Header />
-      {children}
+        {children}
       <Footer />
     </Container>
   </Box>

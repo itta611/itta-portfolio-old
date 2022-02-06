@@ -18,12 +18,12 @@ const Footer = () => (
       >
         @itta611
       </LinkButton>
-      <LinkButton
+      {/* <LinkButton
         href="https://twitter.com/ittaFunahashi"
         leftIcon={<FaTwitter />}
       >
         @ittaFunahashi
-      </LinkButton>
+      </LinkButton> */}
       <LinkButton
         href="https://github.com/itta611/itta-portfolio"
         leftIcon={<FaCode />}

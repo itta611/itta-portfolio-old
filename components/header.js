@@ -10,7 +10,7 @@ const Header = () => (
         fontWeight="extrabold"
         fontFamily="Futura"
       >
-        Itta's Portfolio
+        Itta&apos;s Portfolio
       </Text>
     </VStack>
   </Grid>
